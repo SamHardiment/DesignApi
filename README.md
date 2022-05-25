@@ -86,21 +86,21 @@ count(households.resident_id) < 10`
 
 
 
-Route                                       |         Verb                   |           Action                    |
----------------------------------------------------------------------------------------------------------------------
-/households/                                |          GET                   | Information about all households    |
-/households/id:                             |          GET                   | Information about specific house    |
-/people/                                    |          GET                   | Information about all people        |
-/people/id                                  |          GET                   | Information about individual        |
-/people?age=ageBrackets&householdSize=size  |          GET                   | List with age+size confinements     |
-/people/id                                  |          POST                  | Create a new person                 |
-/households/                                |          POST                  | Create a new house                  |
-/owner/:id                                  |          DELETE                | Remove owner_id, isOwner= false     |
-/people/:id                                 |          DELETE                | Remove resident record, resident_ID |
-/household/:id                              |          DELETE                | Remove id from address table + ID   |
-/address/:id/edit                           |          PATCH/PUT             | Update address                      |
-/Owner/:id/edit                             |          PATCH/PUT             | update owner                        |
-/person/:id/edit                            |          PATCH/PUT             | update person                       |
+|Route                                       |         Verb                   |           Action                    |
+| --- | --- | --- |
+|/households/                                |          GET                   | Information about all households    |
+|/households/id:                             |          GET                   | Information about specific house    |
+|/people/                                    |          GET                   | Information about all people        |
+|/people/id                                  |          GET                   | Information about individual        |
+|/people?age=ageBrackets&householdSize=size  |          GET                   | List with age+size confinements     |
+|/people/id                                  |          POST                  | Create a new person                 |
+|/households/                                |          POST                  | Create a new house                  |
+|/owner/:id                                  |          DELETE                | Remove owner_id, isOwner= false     |
+|/people/:id                                 |          DELETE                | Remove resident record, resident_ID |
+|/household/:id                              |          DELETE                | Remove id from address table + ID   |
+|/address/:id/edit                           |          PATCH/PUT             | Update address                      |
+|/Owner/:id/edit                             |          PATCH/PUT             | update owner                        |
+|/person/:id/edit                            |          PATCH/PUT             | update person                       |
 
 ### Task 5 
 
@@ -108,29 +108,29 @@ Determine the responses that should be returned and the content types of these r
 
 #### Responses
 
-           Get             | No Content | Work |
-------------------------------------------------------
-Get Household              | 404        | 200  |
-Get address                | 404        | 200  |
-Get Owner                  | 404        | 200  |
-get people within age+size | 404        | 200  |
+|           Get             | No Content | Work |
+| --- | --- | --- |
+|Get Household              | 404        | 200  |
+|Get address                | 404        | 200  |
+|Get Owner                  | 404        | 200  |
+|get people within age+size | 404        | 200  |
 
 
-           Post            | No Content | Work |
-------------------------------------------------------
-Post person                | 404        | 201  |
-Post house                 | 404        | 201  |
+|          Post            | No Content | Work |
+| --- | --- | --- |
+|Post person                | 404        | 201  |
+|Post house                 | 404        | 201  |
 
 
-          Delete           | No Content | Unauthorized | Bad Credentials | Work |
----------------------------------------------------------------------------------
-Delete Owner               | 404        | 200          | 403             | 200  |
-Delete Person              | 404        | 200          | 403             | 200  |
-Delete household           | 404        | 200          | 403             | 202  |
+|         Delete           | No Content | Unauthorized | Bad Credentials | Work |
+| --- | --- | --- | --- |
+|Delete Owner               | 404        | 200          | 403             | 200  |
+|Delete Person              | 404        | 200          | 403             | 200  |
+|Delete household           | 404        | 200          | 403             | 202  |
 
 
-           Patch           | No Content | Work |
-------------------------------------------------------
-Patch/Put address          | 404        | 200  |
-Patch/Put owner            | 404        | 200  |
-Patch/Put person           | 404        | 202  |
+|          Patch           | No Content | Work |
+| --- | --- | --- |
+|Patch/Put address          | 404        | 200  |
+|Patch/Put owner            | 404        | 200  |
+|Patch/Put person           | 404        | 202  |
