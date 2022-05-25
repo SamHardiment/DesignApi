@@ -123,7 +123,7 @@ Determine the responses that should be returned and the content types of these r
 
 
 |         Delete           | No Content | Unauthorized | Bad Credentials | Work |
-| --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
 |Delete Owner               | 404        | 200          | 403             | 200  |
 |Delete Person              | 404        | 200          | 403             | 200  |
 |Delete household           | 404        | 200          | 403             | 202  |
